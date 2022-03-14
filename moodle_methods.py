@@ -203,7 +203,7 @@ def search_user():
     print(f'------------------SEARCH---------------------')
     if locators.moodle_users_main_page_url in driver.current_url and driver.title == locators.moodle_users_main_page_title:
         assert driver.find_element(By.LINK_TEXT, 'Browse list of users').is_displayed()
-        print(f' --- Browse list of users page is displayed')
+        #print(f' --- Browse list of users page is displayed')
         if driver.find_element(By.ID, 'fgroup_id_email_grp_label').is_displayed() and driver.find_element(By.NAME,'email').is_displayed():
             sleep(0.25)
             print(f' --- Search for user by email {locators.email}')
